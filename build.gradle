@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+wrapper.gradleVersion = '5.0'
+
+group 'de.simsch'
+version '1.0'
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+manifest {
+    attributes 'Implementation-Title': 'Japper - JDBC to Entity mapper'
+}
+
+repositories {
+    mavenCentral()
+}
+
+//task sourceJar(type: Jar) {
+//    classifier 'sources'
+//    from sourceSets.main.allJava
+//}
+//
+//task packageJavadoc(type: Jar) {
+//    from javadoc
+//    classifier = 'javadoc'
+//}
+
+/*
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact tasks.sourceJar
+            //artifact tasks.yourJavadocTask
+        }
+    }
+}
+*/
+
+dependencies {
+    dependencies {
+        implementation "javax.persistence:javax.persistence-api:2.2"
+        testCompile "org.junit.jupiter:junit-jupiter-api:5.1.0"
+        testCompile "org.junit.jupiter:junit-jupiter-engine:5.1.0"
+        testCompile "org.junit.jupiter:junit-jupiter-params:5.1.0"
+        testCompile "org.assertj:assertj-core:3.11.1"
+        testCompile "org.mockito:mockito-all:2.0.2-beta"
+        testCompile "org.projectlombok:lombok:1.18.4"
+    }
+}
