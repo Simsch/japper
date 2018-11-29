@@ -5,7 +5,7 @@ plugins {
 
 wrapper.gradleVersion = '5.0'
 
-group 'de.simsch'
+group 'io.github.simsch'
 version '1.0'
 
 targetCompatibility = 1.8
