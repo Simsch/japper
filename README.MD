@@ -1,4 +1,6 @@
 # Japper
+[![Build Status](https://travis-ci.org/Simsch/japper.svg?branch=master)](https://travis-ci.org/Simsch/japper)
+
 Japper is a JDBC mapper which can handle a JDBC `ResultSet` and convert* it to a given class (Entity).
 The mapper does not have any other dependency.
 
