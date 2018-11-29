@@ -1,0 +1,12 @@
+language: java
+jobs:
+  include:
+    - stage: Compile
+      script: ./gradlew clean classes testClasses
+    - stage: Test
+      script: ./gradlew test
+    - stage: Build
+      script: ./gradlew build sourcesJar javadocJar
+    - stage: Publish
+      script:
+        - echo "Publish here"
